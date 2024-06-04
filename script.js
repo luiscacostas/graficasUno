@@ -1,4 +1,4 @@
-
+//REFACTORIZAR EN UNA FUNCION
 const firstCallApi = async()=>{
     try {
         const respuesta = await fetch('https://swapi.dev/api/films/')
@@ -31,10 +31,7 @@ try {
    const data = await respuesta.json()
    const personajes = data.results
    const filmsLength = personajes.map(personaje=>personaje.films.length)
-   console.log(filmsLength)
    const nombrePersonaje = personajes.map(personaje => personaje.name)
-   console.log(nombrePersonaje)
-   console.log({personajes})
    return paintBarras(nombrePersonaje, filmsLength)
 } catch (error) {
     console.log(error)
@@ -72,17 +69,6 @@ const paintBarras = (nombrePersonaje, filmsLength)=>{
             offset: 60,
           }
         }],
-        // Options override for media > 800px
-        ['screen and (min-width: 800px)', {
-          stackBars: false,
-          seriesBarDistance: 10
-        }],
-        // Options override for media > 1000px
-        ['screen and (min-width: 1000px)', {
-          reverseData: false,
-          horizontalBars: false,
-          seriesBarDistance: 15
-        }]
       ]);
       
 }
