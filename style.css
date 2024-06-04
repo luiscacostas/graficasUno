@@ -1,0 +1,26 @@
+.ct-series-a .ct-line {
+    /* Set the colour of this series line */
+    stroke: rgb(0, 255, 38);
+    /* Control the thikness of your lines */
+    stroke-width: 5px;
+    /* Create a dashed line with a pattern */
+    stroke-dasharray: 10px 20px;
+  }
+  .ct-series-a .ct-point {
+    /* Colour of your points */
+    stroke: rgb(47, 0, 255);
+    /* Size of your points */
+    stroke-width: 20px;
+    /* Make your points appear as squares */
+    stroke-linecap:round;
+  }
+  .ct-series-a .ct-bar {
+    /* Colour of your bars */
+    stroke: rgb(255, 0, 157);
+    /* The width of your bars */
+    stroke-width: 10px;
+    /* Yes! Dashed bars! */
+    stroke-dasharray: 10px;
+    /* Maybe you like round corners on your bars? */
+    stroke-linecap:square;
+  }
